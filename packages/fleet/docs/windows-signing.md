@@ -26,7 +26,7 @@ Other-platform installer publication is also opt-in.
 ## Official Fleet releases and shared CI
 
 The upstream project and official release location are
-[`crvouga/fleet`](https://github.com/crvouga-organization/fleet), maintained by
+[`crvouga-organization/fleet`](https://github.com/crvouga-organization/fleet), maintained by
 [Chris Vouga](https://www.chrisvouga.dev). Extracting Fleet from
 `crvouga/workspace` does not transfer publisher ownership or require a new
 signing identity. Windows executable properties retain Chris Vouga attribution,
