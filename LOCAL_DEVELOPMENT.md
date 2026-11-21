@@ -63,7 +63,7 @@ selection; an occupied port fails rather than stopping another service. Use
 
 | App                | Committed integration            | Behavior                                                                                                                    |
 | ------------------ | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| Superset / Paradev | `.superset/config.json`          | Setup installs/builds; Run starts the controller and Mockingbird with watches; teardown stops that checkout                                 |
+| Superset / Paradev | `.superset/config.json`          | Setup installs/builds; Run starts the controller and Mockingbird with watches; teardown stops that checkout                 |
 | super.engineering  | `.super.engineering/config.json` | Named **Fleet local**, **Check**, and **Local doctor** runs; Fleet is the default; Stop and teardown clean up its local run |
 | Orca               | Repository hook commands below   | Configure Setup and Archive hooks in Repository settings; run Fleet in a repository terminal                                |
 | Any shell or agent | Root package scripts             | Identical setup, run, status, stop, and validation commands                                                                 |
@@ -148,5 +148,5 @@ installer is emulated by the local dashboard launcher.
 If a package fails or lacks behavior Fleet uses, follow the
 [Mockingbird reporting guide](https://github.com/crvouga-organization/mockingbird/blob/main/docs/REPORTING_ISSUES.md):
 search existing issues, reduce the problem to a redacted reproduction, record the
-exact package version and expected contract, and report it in `crvouga/mockingbird`.
+exact package version and expected contract, and report it in `crvouga-organization/mockingbird`.
 Do not patch dependencies or add an application-side fake to hide the failure.
