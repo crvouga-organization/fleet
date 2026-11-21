@@ -6,7 +6,7 @@ Every machine installs the same role-less `base` system. The Fleet controller as
 
 Fleet runs on hardware you control. It does not require Railway, Cloudflare, a particular Vault, the author's infrastructure, or a cloud account. The optional Fleet controller coordinates enrollment, node settings, telemetry and recovery through a dashboard, backed by Bun and SQLite. By default, Litestream restores and replicates its database to your S3-compatible bucket, so the compute is replaceable. Browser login uses a configurable HTTPS OpenID Connect provider with authorization code + S256 PKCE and verified email claims.
 
-Fleet is maintained by [Chris Vouga](https://www.chrisvouga.dev). Runtime independence does not remove release ownership: official installers come from `crvouga/fleet`, and release CI may use the maintainer’s shared infrastructure, including Vault/OpenBao. Windows builds include author and product metadata; Windows publisher verification requires the separate [signing workflow](packages/fleet/docs/windows-signing.md). CI credentials never belong in the app or downloadable installer.
+Fleet is maintained by [Chris Vouga](https://www.chrisvouga.dev). Runtime independence does not remove release ownership: official installers come from `crvouga-organization/fleet`, and release CI may use the maintainer’s shared infrastructure, including Vault/OpenBao. Windows builds include author and product metadata; Windows publisher verification requires the separate [signing workflow](packages/fleet/docs/windows-signing.md). CI credentials never belong in the app or downloadable installer.
 
 ## Try the dashboard
 
