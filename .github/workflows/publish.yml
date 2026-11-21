@@ -38,7 +38,7 @@ jobs:
     permissions:
       contents: read
       packages: write
-    uses: crvouga/personal/.github/workflows/publish.yml@main
+    uses: crvouga-organization/personal/.github/workflows/publish.yml@main
     secrets:
       DEPLOY_DISPATCH_TOKEN: ${{ secrets.DEPLOY_DISPATCH_TOKEN }}
       CALLER_GITHUB_TOKEN: ${{ github.token }}

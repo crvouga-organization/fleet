@@ -14,7 +14,7 @@ VSVersionInfo(
                 StringStruct('OriginalFilename', 'fleet-installer-windows-x64.exe'),
                 StringStruct('ProductName', 'Fleet'),
                 StringStruct('ProductVersion', @FLEET_VERSION@),
-                StringStruct('Comments', 'https://github.com/crvouga/fleet'),
+                StringStruct('Comments', 'https://github.com/crvouga-organization/fleet'),
             ])
         ]),
         VarFileInfo([VarStruct('Translation', [1033, 1200])]),

@@ -210,7 +210,7 @@ refusal to start without configuration. It also runs the single-writer drills
 owner, simultaneous cold start, providers without conditional writes), each ending
 with a fresh-container restore and `PRAGMA integrity_check`; their offline
 orchestration self-test is `scripts/check-container-selftest.py`. Trusted main pushes call workspace's
-reusable publisher for `ghcr.io/crvouga/chrisvouga-fleet-api:<commit-sha>` and
+reusable publisher for `ghcr.io/crvouga-organization/chrisvouga-fleet-api:<commit-sha>` and
 `:latest`. Successful publication dispatches that commit to workspace's managed
 `fleet-api` service. Hosting, secrets and DNS remain OpenTofu-owned in the
 operator's platform repository. Image publication does not establish live

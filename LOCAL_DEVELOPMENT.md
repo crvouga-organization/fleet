@@ -146,7 +146,7 @@ reports remain optional and are not a startup dependency. No physical machine or
 installer is emulated by the local dashboard launcher.
 
 If a package fails or lacks behavior Fleet uses, follow the
-[Mockingbird reporting guide](https://github.com/crvouga/mockingbird/blob/main/docs/REPORTING_ISSUES.md):
+[Mockingbird reporting guide](https://github.com/crvouga-organization/mockingbird/blob/main/docs/REPORTING_ISSUES.md):
 search existing issues, reduce the problem to a redacted reproduction, record the
 exact package version and expected contract, and report it in `crvouga/mockingbird`.
 Do not patch dependencies or add an application-side fake to hide the failure.

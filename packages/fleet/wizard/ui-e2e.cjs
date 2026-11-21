@@ -271,7 +271,7 @@ async function main() {
       });
       const issueUrl = await page.evaluate(() => window.openedIssues[0]);
       assert.ok(
-        issueUrl.startsWith('https://github.com/crvouga/fleet/issues/new?'),
+        issueUrl.startsWith('https://github.com/crvouga-organization/fleet/issues/new?'),
         issueUrl
       );
       const query = new URL(issueUrl).searchParams;
