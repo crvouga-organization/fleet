@@ -1,6 +1,6 @@
 {
   description = "Example operator-owned Fleet deployment";
-  inputs.fleet.url = "github:crvouga/fleet?dir=packages/fleet";
+  inputs.fleet.url = "github:crvouga-organization/fleet?dir=packages/fleet";
   outputs = { self, fleet }: fleet.lib.mkFleet {
     inherit self;
     shared = {

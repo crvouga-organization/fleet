@@ -29,7 +29,7 @@ FROM manifests AS production-dependencies
 RUN bun install --frozen-lockfile --production
 
 FROM oven/bun:1.4.4-debian AS runtime
-LABEL org.opencontainers.image.source="https://github.com/crvouga/fleet"
+LABEL org.opencontainers.image.source="https://github.com/crvouga-organization/fleet"
 WORKDIR /app
 COPY --from=litestream /usr/local/bin/litestream /usr/local/bin/litestream
 COPY --from=production-dependencies /app/ ./

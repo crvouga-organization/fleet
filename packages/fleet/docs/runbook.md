@@ -16,13 +16,13 @@ The machine can already be running Windows, macOS, or Linux. Download one file o
 2. On the machine, download the node program and run it. The release does not expire. The 14-day `fleet-installer` Actions artifact is not this download.
 
    ```sh
-   curl -fsSL -o fleet-node.sh https://github.com/crvouga/fleet/releases/download/fleet-installer/fleet-node.sh
+   curl -fsSL -o fleet-node.sh https://github.com/crvouga-organization/fleet/releases/download/fleet-installer/fleet-node.sh
    bash fleet-node.sh
    ```
 
-   Windows, from PowerShell: `curl.exe -fsSL -o fleet-node.sh https://github.com/crvouga/fleet/releases/download/fleet-installer/fleet-node.sh` and then `bash fleet-node.sh`. The installer does not ask for a role: every machine installs the role-less `base` system and the fleet controller assigns its role afterwards (see "Assign or change a role" below and [ARCHITECTURE.md](../../../ARCHITECTURE.md)). `--yes` skips only the typed confirmation and is not authorization; every disk refusal still applies. The program names the internal disk in plain language. Nothing is erased until you type the line it shows. A timeout, an empty answer, a wrong line, or a USB, removable, hotplug, or ambiguous disk leaves every disk unchanged and prints one next step. If the download fails, the program exits non-zero, writes nothing, and prints one next step.
+   Windows, from PowerShell: `curl.exe -fsSL -o fleet-node.sh https://github.com/crvouga-organization/fleet/releases/download/fleet-installer/fleet-node.sh` and then `bash fleet-node.sh`. The installer does not ask for a role: every machine installs the role-less `base` system and the fleet controller assigns its role afterwards (see "Assign or change a role" below and [ARCHITECTURE.md](../../../ARCHITECTURE.md)). `--yes` skips only the typed confirmation and is not authorization; every disk refusal still applies. The program names the internal disk in plain language. Nothing is erased until you type the line it shows. A timeout, an empty answer, a wrong line, or a USB, removable, hotplug, or ambiguous disk leaves every disk unchanged and prints one next step. If the download fails, the program exits non-zero, writes nothing, and prints one next step.
 
-   Or hand it to an agent on the machine: tell it `Set this machine up as a fleet node by following https://raw.githubusercontent.com/crvouga/fleet/main/packages/fleet/docs/agent-install.md`. It runs `doctor` first (read-only, every problem at once, the exact disk named), asks you to confirm that disk, and then installs. See [agent-install.md](agent-install.md).
+   Or hand it to an agent on the machine: tell it `Set this machine up as a fleet node by following https://raw.githubusercontent.com/crvouga-organization/fleet/main/packages/fleet/docs/agent-install.md`. It runs `doctor` first (read-only, every problem at once, the exact disk named), asks you to confirm that disk, and then installs. See [agent-install.md](agent-install.md).
 
    To see what would happen without risk: `sudo bash fleet-node.sh doctor`. Every run writes a redacted log under the state directory (`~/.fleet/logs` before the install, `/nix/fleet-state/logs` after) and prints its path when something fails. After the node boots, `fleet-node status` on it says whether it is healthy.
 

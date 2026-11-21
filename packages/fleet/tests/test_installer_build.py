@@ -50,7 +50,7 @@ class InstallerBuildTests(unittest.TestCase):
         self.assertEqual(resources[0]["CompanyName"], "Chris Vouga")
         self.assertEqual(resources[0]["ProductName"], "Fleet")
         self.assertEqual(resources[0]["ProductVersion"], version)
-        self.assertEqual(resources[0]["Comments"], "https://github.com/crvouga/fleet")
+        self.assertEqual(resources[0]["Comments"], "https://github.com/crvouga-organization/fleet")
 
 class InstallerPackagingParityTests(unittest.TestCase):
     """The native launcher (Nix) and the PyInstaller build ship the same wizard files.

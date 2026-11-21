@@ -10,7 +10,7 @@ name: Post-deploy check
 #
 #   post-deploy:
 #     needs: deploy
-#     uses: crvouga/fleet/.github/workflows/post-deploy.yml@main
+#     uses: crvouga-organization/fleet/.github/workflows/post-deploy.yml@main
 #     secrets: inherit        # passes FLEET_ADMIN_TOKEN
 #     with:
 #       require_github: false

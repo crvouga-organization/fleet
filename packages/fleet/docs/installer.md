@@ -245,8 +245,8 @@ sudo fleet-node install --reinstall
 If the installed command predates this flag, run the latest native CLI:
 
 ```sh
-sudo nix --extra-experimental-features 'nix-command flakes' run 'github:crvouga/fleet/main?dir=packages/fleet#fleet-node' -- install --reinstall --plan
-sudo nix --extra-experimental-features 'nix-command flakes' run 'github:crvouga/fleet/main?dir=packages/fleet#fleet-node' -- install --reinstall
+sudo nix --extra-experimental-features 'nix-command flakes' run 'github:crvouga-organization/fleet/main?dir=packages/fleet#fleet-node' -- install --reinstall --plan
+sudo nix --extra-experimental-features 'nix-command flakes' run 'github:crvouga-organization/fleet/main?dir=packages/fleet#fleet-node' -- install --reinstall
 ```
 
 The second command asks you to confirm the exact internal disk before anything
