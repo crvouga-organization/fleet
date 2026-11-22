@@ -12,7 +12,11 @@ const job = workflow.jobs.sign;
 
 test('only a successful trusted main CI can acquire the publisher identity', () => {
   expect(workflow.on).toEqual({
-    workflow_run: { workflows: ['CI'], types: ['completed'] },
+    workflow_run: {
+      workflows: ['CI'],
+      branches: ['main'],
+      types: ['completed'],
+    },
   });
   for (const guard of [
     "vars.FLEET_PUBLISH_RELEASES == 'enabled'",
