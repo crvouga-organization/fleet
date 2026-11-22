@@ -90,7 +90,7 @@ sed -n '/^# __WIFI_CAPTURE_PY__$/,/^# __WIFI_CAPTURE_END__$/p' "$0" | sed '1d;$d
 # }
 # # The release asset does not expire. The Fleet workflow's fleet-installer
 # # artifact still lasts 14 days; this program does not download that copy.
-# REPO = os.environ.get("FLEET_BUG_REPORT_REPO") or os.environ.get("FLEET_GITHUB_REPO") or "crvouga-organization/fleet"
+# REPO = os.environ.get("FLEET_BUG_REPORT_REPO") or os.environ.get("FLEET_GITHUB_REPO") or "crvouga/fleet"
 # RELEASE_ISO = ""
 # DEVICE_RE = re.compile(r"^/dev/[A-Za-z0-9._/:-]+$")
 # WINDOWS_RE = re.compile(r"^\\\\\.\\PHYSICALDRIVE[0-9]+$")

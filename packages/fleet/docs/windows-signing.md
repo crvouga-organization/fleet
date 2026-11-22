@@ -26,9 +26,9 @@ Other-platform installer publication is also opt-in.
 ## Official Fleet releases and shared CI
 
 The upstream project and official release location are
-[`crvouga-organization/fleet`](https://github.com/crvouga-organization/fleet), maintained by
+[`crvouga/fleet`](https://github.com/crvouga/fleet), maintained by
 [Chris Vouga](https://www.chrisvouga.dev). Extracting Fleet from
-`crvouga-organization/personal` does not transfer publisher ownership or require a new
+`crvouga/personal` does not transfer publisher ownership or require a new
 signing identity. Windows executable properties retain Chris Vouga attribution,
 Fleet product information and the source revision. These editable properties
 are attribution, not proof of a verified publisher.
@@ -36,8 +36,8 @@ are attribution, not proof of a verified publisher.
 For official releases, keep `publisher` equal to the **exact certificate subject**
 of Chris Vouga’s verified signing profile. Do not guess a subject from the author
 name, GitHub owner or executable properties. A fork must configure its own
-verified publisher. Azure trust must authorize the new `crvouga-organization/fleet` workflow
-subject; trust for `crvouga-organization/personal` alone does not authorize this repository.
+verified publisher. Azure trust must authorize the new `crvouga/fleet` workflow
+subject; trust for `crvouga/personal` alone does not authorize this repository.
 Infrastructure changes remain operator-owned and outside Fleet.
 
 Shared Vault/OpenBao is permitted in trusted release CI. Follow the current
@@ -52,7 +52,7 @@ Do not add Vault just to store these nonsecret identifiers.
 
 Keep all CI credentials out of build arguments, packaged resources, artifacts,
 logs and application runtime. Fleet must start and installers must run without
-contacting the maintainer’s Vault or checking out `crvouga-organization/personal`.
+contacting the maintainer’s Vault or checking out `crvouga/personal`.
 
 To enable publication, the operator must provide the verified signing profile,
 its exact publisher subject, repository-scoped OIDC trust and the variables above.

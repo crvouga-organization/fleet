@@ -187,7 +187,7 @@ and a runner executing a real job still require a spare-machine acceptance run.
 ## 2026-10-16 installer recovery and browser acceptance
 
 The original `fleet-installer` release was absent. Re-running the failed main
-Fleet workflow [38685265311, attempt 2](https://github.com/crvouga-organization/fleet/actions/runs/38685265311/attempts/2)
+Fleet workflow [38685265311, attempt 2](https://github.com/crvouga/fleet/actions/runs/38685265311/attempts/2)
 passed its NixOS checks, VM tests, role/ISO builds, five wizard platform builds
 and publication. All five public installer downloads now return HTTP 200.
 The release-recovery workflow change also rebuilds an incomplete/missing
@@ -309,7 +309,7 @@ Validated locally on macOS ARM64:
 - Prettier for changed Markdown/workflows, `git diff --check`,
   `bun run check:llms` and `bun run check:agents`: **pass**.
 
-Read-only GitHub evidence: [main run 38659022284](https://github.com/crvouga-organization/fleet/actions/runs/38659022284)
+Read-only GitHub evidence: [main run 38659022284](https://github.com/crvouga/fleet/actions/runs/38659022284)
 passed the Linux flake check, VM tests, five role builds and ISO build, and all
 five wizard builds/self-tests/browser tests. Its **publish failed** with HTTP
 422 on the oversized ISO. The later green Fleet status skipped the builds;

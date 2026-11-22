@@ -7,7 +7,7 @@ import threading
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse
 
-REPO = "crvouga-organization/fleet"
+REPO = "crvouga/fleet"
 
 
 class _Server:
