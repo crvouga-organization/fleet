@@ -275,7 +275,7 @@ class IssueFormTests(unittest.TestCase):
 
     def test_cli_failures_end_with_a_report_link(self):
         link = decide.report_link(f"Next: the enrollment token {SECRET} was refused. Nothing was written.", "doctor")
-        self.assertTrue(link.startswith("Report: https://github.com/crvouga-organization/fleet/issues/new?template=fleet-installer.yml"))
+        self.assertTrue(link.startswith("Report: https://github.com/crvouga/fleet/issues/new?template=fleet-installer.yml"))
         self.assertNotIn(SECRET, link)
         self.assertLessEqual(len(link), 2100)
 
