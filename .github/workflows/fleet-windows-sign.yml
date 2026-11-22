@@ -2,6 +2,7 @@ name: Fleet Windows signing
 on:
   workflow_run:
     workflows: [CI]
+    branches: [main]
     types: [completed]
 permissions:
   contents: read

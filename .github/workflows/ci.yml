@@ -3,7 +3,8 @@ on:
   push:
     branches:
       - main
-  pull_request: {}
+  pull_request:
+    paths-ignore: ['**.md', 'docs/**']
   workflow_dispatch: {}
   workflow_call: {}
 defaults:
@@ -11,11 +12,13 @@ defaults:
     shell: bash
 concurrency:
   group: ci-${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  # Only PR runs cancel; main runs carry the release job and must finish.
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 permissions:
   contents: read
 jobs:
   check:
+    timeout-minutes: 30
     name: Check
     runs-on: ubuntu-latest
     steps:
